@@ -1,6 +1,7 @@
 #include <iostream>
-#include <vector>
+#include <cmath>
 #include <algorithm>
+
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int main(int argc, char const *argv[])
         W2 += I - (basic + A);
         // basic += (abs(I - ( basic + A)) > T) ? abs(I - ( basic + A))/2 : I - ( basic + A);
         if (abs(I - ( basic + A)) > T) {
-            basic += (I - (basic + A))/2;
+            basic += floor(I - (basic + A))/2;
         }
         
         //cout << W2 << " " << basic << "\n";
